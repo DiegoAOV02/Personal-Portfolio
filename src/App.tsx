@@ -1,7 +1,7 @@
 import "./App.css";
 import "./index.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import LoadingScreen from "./components/LoadingScreen";
 import { useState } from "react";
 
@@ -21,7 +21,7 @@ function App() {
         />
       ) : (
         <>
-        {/* After the loading screen, the rest of the webpage is displayed. */}
+          {/* After the loading screen, the rest of the webpage is displayed. */}
           <Header />
           <Footer />
         </>
