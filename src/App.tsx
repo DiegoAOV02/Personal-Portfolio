@@ -27,9 +27,15 @@ function App() {
           {/* After the loading screen, the rest of the webpage is displayed. */}
           <Header />
           <main className="pt-24 scroll-smooth" id="main-content">
-            <section id="about"><About /></section>
-            <section id="projects"><Projects /></section>
-            <section id="resume"><Resume /></section>
+            <section id="about">
+              <About />
+            </section>
+            <section id="projects">
+              <Projects />
+            </section>
+            <section id="resume">
+              <Resume />
+            </section>
           </main>
           <Footer />
         </>

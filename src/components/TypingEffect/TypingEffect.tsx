@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react";
 
 function TypingEffect() {
   const phrases = useMemo(
@@ -9,12 +9,12 @@ function TypingEffect() {
       "AI Enthusiast",
     ],
     []
-  )
+  );
 
-  const [text, setText] = useState("")
-  const [phraseIndex, setPhraseIndex] = useState(0)
-  const [charIndex, setCharIndex] = useState(0)
-  const [deleting, setDeleting] = useState(false)
+  const [text, setText] = useState("");
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
@@ -47,7 +47,7 @@ function TypingEffect() {
       <span>{text}</span>
       <span className="animate-blink ml-1">|</span>
     </div>
-  )
+  );
 }
 
-export default TypingEffect
+export default TypingEffect;
