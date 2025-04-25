@@ -8,7 +8,7 @@ function TypingEffect() {
       "Data Scientist",
       "AI Enthusiast",
     ],
-    []
+    [],
   );
 
   const [text, setText] = useState("");
