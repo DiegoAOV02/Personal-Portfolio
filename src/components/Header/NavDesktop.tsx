@@ -6,7 +6,7 @@ function NavDesktop({ activeSection }: { activeSection: string }) {
   ];
 
   const handleClick = (id: string) => {
-      const section = document.getElementById(id)
+    const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }

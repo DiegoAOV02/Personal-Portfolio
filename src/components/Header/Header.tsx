@@ -30,7 +30,7 @@ function Header() {
         <HamburgerButton open={open} setOpen={setOpen} />
         <NavDesktop activeSection={activeSection} />
       </div>
-      <NavMobile open={open} />
+      <NavMobile open={open} activeSection={activeSection} />
     </header>
   );
 }
