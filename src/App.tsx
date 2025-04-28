@@ -19,7 +19,7 @@ function App() {
           fadeOut={fadeOut}
           onComplete={() => {
             setFadeOut(true);
-            setTimeout(() => setIsLoaded(true), 1000); // Wait a second before setting isLoaded to true
+            setTimeout(() => setIsLoaded(true), 1500); // Wait a second before setting isLoaded to true
           }}
         />
       ) : (

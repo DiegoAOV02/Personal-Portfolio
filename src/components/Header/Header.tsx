@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import NavDesktop from "./NavDesktop";
 import NavMobile from "./NavMobile";
@@ -11,6 +11,8 @@ function Header() {
 
   const activeSection = useScrollSpy(["about", "projects", "resume"]);
 
+  const headerRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -19,8 +21,25 @@ function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Detect click outside of the header
+  useEffect(() => {
+    if (!open) return;
+
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick)
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick)
+    }
+  }, [open])
+
   return (
     <header
+      ref={headerRef}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md ${
         isScrolled ? "bg-gray-800/70 py-2 shadow-md" : "bg-transparent py-4"
       } px-4 sm:px-6 md:px-8 text-white`}
@@ -30,7 +49,7 @@ function Header() {
         <HamburgerButton open={open} setOpen={setOpen} />
         <NavDesktop activeSection={activeSection} />
       </div>
-      <NavMobile open={open} activeSection={activeSection} />
+      <NavMobile open={open} activeSection={activeSection} setOpen={setOpen} />
     </header>
   );
 }
