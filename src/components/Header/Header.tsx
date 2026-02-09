@@ -11,7 +11,7 @@ function Header() {
 
   const activeSection = useScrollSpy(["about", "projects", "resume"]);
 
-  const headerRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -26,16 +26,19 @@ function Header() {
     if (!open) return;
 
     const handleOutsideClick = (event: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
-        setOpen(false)
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
       }
-    }
+    };
 
-    document.addEventListener("mousedown", handleOutsideClick)
+    document.addEventListener("mousedown", handleOutsideClick);
     return () => {
-      document.removeEventListener("mousedown", handleOutsideClick)
-    }
-  }, [open])
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [open]);
 
   return (
     <header

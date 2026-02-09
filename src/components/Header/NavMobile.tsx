@@ -1,6 +1,14 @@
 import { useEffect, useRef } from "react";
 
-function NavMobile({ open, activeSection, setOpen }: { open: boolean; activeSection: string; setOpen?: (open: boolean) => void; }) {
+function NavMobile({
+  open,
+  activeSection,
+  setOpen,
+}: {
+  open: boolean;
+  activeSection: string;
+  setOpen?: (open: boolean) => void;
+}) {
   const menuRef = useRef<HTMLUListElement>(null);
 
   const links = [
