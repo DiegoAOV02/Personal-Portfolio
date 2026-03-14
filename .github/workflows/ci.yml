@@ -50,6 +50,11 @@ jobs:
       - name: Smoke Test
         # Verifies the build can actually start and serve a response
         run: |
-          pnpm start & 
-          npx wait-on http://localhost:3000 --timeout 30000
-          curl -I http://localhost:3000
+          # Start the preview server on port 4173
+          pnpm start -- --host & 
+          
+          # Wait for port 4173 instead of 3000
+          npx wait-on http://localhost:4173 --timeout 30000
+          
+          # Verify the server responds
+          curl -I http://localhost:4173
