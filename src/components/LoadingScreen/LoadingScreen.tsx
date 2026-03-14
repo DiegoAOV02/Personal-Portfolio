@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-function LoadingScreen({ onComplete, fadeOut }) {
+// Define interface for props
+interface LoadingScreenProps {
+  onComplete: () => void
+  fadeOut: boolean
+}
+
+function LoadingScreen({ onComplete, fadeOut }: LoadingScreenProps) {
   const [text, setText] = useState("");
   const fullText = "<Hi, welcome!/>";
 
