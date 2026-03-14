@@ -1,0 +1,55 @@
+name: NextJS CI
+
+on:
+  push:
+    # Use wildcards to trigger on every branch
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck and Lint
+        # Running these in parallel or sequence to catch early exits
+        run: |
+          pnpm typecheck
+          pnpm lint
+          pnpm prettier_check
+
+      - name: Build Next.js
+        # This is the most important step for Vercel readiness
+        run: pnpm build
+        env:
+          # Mocking production env to ensure build stability
+          NODE_ENV: production
+
+      - name: Smoke Test
+        # Verifies the build can actually start and serve a response
+        run: |
+          pnpm start & 
+          npx wait-on http://localhost:3000 --timeout 30000
+          curl -I http://localhost:3000
