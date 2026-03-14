@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 // Define interface for props
 interface LoadingScreenProps {
-  onComplete: () => void
-  fadeOut: boolean
+  onComplete: () => void;
+  fadeOut: boolean;
 }
 
 function LoadingScreen({ onComplete, fadeOut }: LoadingScreenProps) {

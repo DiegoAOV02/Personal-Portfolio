@@ -22,7 +22,8 @@ function TypingEffect() {
     let timeout: number; // Updated to number instead of NodeJS
 
     if (deleting) {
-      timeout = window.setTimeout(() => { // Use window.setTimeout is safer for TS
+      timeout = window.setTimeout(() => {
+        // Use window.setTimeout is safer for TS
         setText(currentPhrase.substring(0, charIndex - 1));
         setCharIndex((prev) => prev - 1);
         if (charIndex === 0) {
