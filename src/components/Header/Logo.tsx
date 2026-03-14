@@ -21,7 +21,7 @@ function Logo() {
           group-hover:tracking-wide
         "
       >
-        Diego{" "}
+        Diego
         <span
           className="
             text-blue-400

@@ -5,8 +5,9 @@ function TypingEffect() {
     () => [
       "IT Engineer",
       "Fullstack Developer",
-      "Data Scientist",
+      "Data Analyst",
       "AI Enthusiast",
+      "Tech Lover",
     ],
     [],
   );
