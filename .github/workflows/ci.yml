@@ -52,9 +52,9 @@ jobs:
         run: |
           # Start the preview server on port 4173
           pnpm start -- --host & 
-          
+
           # Wait for port 4173 instead of 3000
           npx wait-on http://localhost:4173 --timeout 30000
-          
+
           # Verify the server responds
           curl -I http://localhost:4173
