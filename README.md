@@ -1,6 +1,6 @@
 # Personal portfolio in progress...🔨
 
-![NextJS CI](https://github.com/DiegoAOV02/Personal-Portfolio/actions/workflows/ci.yml/badge.svg) [![Vercel Deployment](https://deploy-badge.vercel.app/vercel/portfolio)](diego-portfolio-7m8kw1yqe-diego-ortizs-projects-88cc7dfd.vercel.app)
+![NextJS CI](https://github.com/DiegoAOV02/Personal-Portfolio/actions/workflows/ci.yml/badge.svg) [![Vercel Deployment](https://deploy-badge.vercel.app/vercel/portfolio)](diego-portfolio-7m8kw1yqe-diego-ortizs-projects-88cc7dfd.vercel.app) [![React](https://img.shields.io/badge/React-19.0.0-61DAFB.svg?style=flat&logo=react&logoColor=white)](https://react.dev) [![NodeJS](https://img.shields.io/badge/Node.js-25.x-339933.svg?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 
 Hey! Thank you for visiting this repo. I am currently finishing my portfolio.
 
