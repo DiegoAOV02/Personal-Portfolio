@@ -1,33 +1,23 @@
-function NavDesktop({ activeSection }: { activeSection: string }) {
+const NavDesktop = () => {
   const links = [
-    { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
-    { id: "resume", label: "Resume" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Resume", href: "#resume" },
   ];
 
-  const handleClick = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <ul className="hidden md:flex space-x-4 lg:space-x-8 text-base">
-      {links.map(({ id, label }) => (
-        <li key={id}>
-          <button
-            onClick={() => handleClick(id)}
-            className={`transition-colors duration-200 cursor-pointer ${
-              activeSection === id ? "text-cyan-400" : "hover:text-gray-400"
-            }`}
-          >
-            {label}
-          </button>
-        </li>
+    <nav className="hidden md:flex items-center gap-8">
+      {links.map((link) => (
+        <a
+          key={link.name}
+          href={link.href}
+          className="text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors duration-300"
+        >
+          {link.name}
+        </a>
       ))}
-    </ul>
+    </nav>
   );
-}
+};
 
 export default NavDesktop;
