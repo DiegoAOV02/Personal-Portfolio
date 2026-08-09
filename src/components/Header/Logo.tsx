@@ -81,10 +81,7 @@ function Logo() {
         {renderName(NAME)}
         <span className="ml-0.5">|</span>
       </span>
-      <span
-        className="absolute inset-0 flex items-center"
-        aria-hidden="true"
-      >
+      <span className="absolute inset-0 flex items-center" aria-hidden="true">
         {renderName(NAME.slice(0, charIndex))}
         {isAnimating && (
           <span className="animate-blink ml-0.5 text-cyan-400">|</span>
