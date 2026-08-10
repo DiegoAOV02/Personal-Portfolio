@@ -1,22 +1,14 @@
 import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
 import NavDesktop from "./NavDesktop";
-import HamburgerButton from "./HamburgerButton";
 import NavMobile from "./NavMobile";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  // NavMobile requires an activeSection string according to the error
-  const [activeSection] = useState("about");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-
-      // Optional: Logic to update activeSection based on scroll position
-      // For now, we'll keep a default to satisfy the TypeScript requirement
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -34,6 +26,7 @@ const Header = () => {
         <Logo />
 
         <NavDesktop />
+        <NavMobile />
 
         <div className="hidden md:block">
           <a
@@ -62,23 +55,7 @@ const Header = () => {
             <span>Let's Connect!</span>
           </a>
         </div>
-
-        {/* Mobile Toggle - Updated Prop Names */}
-        <div className="md:hidden">
-          <HamburgerButton open={isOpen} setOpen={setIsOpen} />
-        </div>
       </div>
-
-      {/* Mobile Menu - Updated Prop Names and added activeSection */}
-      <AnimatePresence>
-        {isOpen && (
-          <NavMobile
-            open={isOpen}
-            setOpen={setIsOpen}
-            activeSection={activeSection}
-          />
-        )}
-      </AnimatePresence>
     </header>
   );
 };

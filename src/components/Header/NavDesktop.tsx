@@ -1,23 +1,9 @@
-const NavDesktop = () => {
-  const links = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Resume", href: "#resume" },
-  ];
+import NavLinks from "./NavLinks";
 
-  return (
-    <nav className="hidden md:flex items-center gap-8">
-      {links.map((link) => (
-        <a
-          key={link.name}
-          href={link.href}
-          className="text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors duration-300"
-        >
-          {link.name}
-        </a>
-      ))}
-    </nav>
-  );
-};
+const NavDesktop = () => (
+  <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-md">
+    <NavLinks />
+  </nav>
+);
 
 export default NavDesktop;
