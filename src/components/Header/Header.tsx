@@ -30,7 +30,7 @@ const Header = () => {
           : "py-8 bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="w-full px-6 flex items-center justify-between">
         <Logo />
 
         <NavDesktop />
