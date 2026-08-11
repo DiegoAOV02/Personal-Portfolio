@@ -21,7 +21,7 @@ const NavLinks = () => (
         key={name}
         href={href}
         aria-label={name}
-        className="group flex h-9 items-center rounded-full text-gray-400 transition-colors duration-300 hover:bg-white/10 hover:text-white"
+        className="group flex h-9 items-center rounded-full text-white transition-colors duration-300 hover:bg-white/10 hover:text-white"
       >
         <span className="flex h-9 w-9 shrink-0 items-center justify-center">
           <Icon size={16} strokeWidth={2} />

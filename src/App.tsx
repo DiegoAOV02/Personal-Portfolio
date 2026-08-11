@@ -1,5 +1,6 @@
 import "./App.css";
 import "./index.css";
+import Background from "./components/Background/Background";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
@@ -25,6 +26,7 @@ function App() {
         />
       ) : (
         <>
+          <Background />
           {/* Commented section to display a "Construction Message". */}
           <div className="flex flex-col min-h-screen">
             <Header />
