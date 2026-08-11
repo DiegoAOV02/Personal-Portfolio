@@ -7,6 +7,7 @@ import { useState } from "react";
 import About from "./components/Sections/About";
 import Projects from "./components/Sections/Projects";
 import Resume from "./components/Sections/Resume";
+import Home from "./components/Sections/Home";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false); // State to track if the loading screen is complete
@@ -28,6 +29,9 @@ function App() {
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow pt-24 scroll-smooth">
+              <section id="home">
+                <Home />
+              </section>
               <section id="about">
                 <About />
               </section>
