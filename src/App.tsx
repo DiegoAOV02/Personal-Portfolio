@@ -4,11 +4,13 @@ import Background from "./components/Background/Background";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+import ProfileCard from "./components/ProfileCard/ProfileCard";
 import { useState } from "react";
-import About from "./components/Sections/About";
+import type { CSSProperties } from "react";
 import Projects from "./components/Sections/Projects";
 import Resume from "./components/Sections/Resume";
 import Home from "./components/Sections/Home";
+import Tech from "./components/Sections/Tech";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false); // State to track if the loading screen is complete
@@ -28,25 +30,38 @@ function App() {
         <>
           <Background />
           {/* Commented section to display a "Construction Message". */}
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow pt-24 scroll-smooth">
-              <section id="home">
-                <Home />
-              </section>
-              <section id="about">
-                <About />
-              </section>
-              <section id="projects">
-                <Projects />
-              </section>
-              <section id="resume">
-                <Resume />
-              </section>
-            </main>
-          </div>
+          <div
+            style={
+              {
+                // Left edge of a 1152px-wide centered column, never closer
+                // than 2.5rem to the viewport edge on narrower desktops.
+                "--sidebar-left": "max(2.5rem, calc(50% - 576px))",
+              } as CSSProperties
+            }
+          >
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <ProfileCard />
+              <main className="flex-grow pt-24 scroll-smooth lg:pl-[calc(var(--sidebar-left)+384px)]">
+                <section id="home">
+                  <Home />
+                </section>
+                <section id="projects">
+                  <Projects />
+                </section>
+                <section id="resume">
+                  <Resume />
+                </section>
+                <section id="tech">
+                  <Tech />
+                </section>
+              </main>
+            </div>
 
-          <Footer />
+            <div className="lg:pl-[calc(var(--sidebar-left)+384px)]">
+              <Footer />
+            </div>
+          </div>
         </>
       )}
     </>

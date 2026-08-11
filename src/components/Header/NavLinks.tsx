@@ -1,4 +1,4 @@
-import { FileText, FolderKanban, Home, User } from "lucide-react";
+import { FileText, FolderKanban, Home } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface NavLink {
@@ -9,7 +9,6 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { name: "Home", href: "#", icon: Home },
-  { name: "About", href: "#about", icon: User },
   { name: "Projects", href: "#projects", icon: FolderKanban },
   { name: "Resume", href: "#resume", icon: FileText },
 ];

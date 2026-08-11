@@ -1,4 +1,4 @@
-const BACKGROUND_COLOR = "#fff0";
+const BACKGROUND_COLOR = "#151312";
 
 const Background = () => (
   <div

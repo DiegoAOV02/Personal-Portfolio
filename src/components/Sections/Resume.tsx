@@ -1,13 +1,10 @@
 function Resume() {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center px-6 py-16">
-      <h1 className="text-4xl md:text-5xl font-bold">Resume</h1>
-      <p className="w-full text-center text-gray-100 text-lg md:text-lg leading-relaxed">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-        exercitationem suscipit blanditiis deserunt repellat ut quo, maiores
-        sunt mollitia, illo consequatur tempore nam nostrum repudiandae, harum
-        eos qui corrupti perferendis.
-      </p>
+    <div className="w-full flex flex-col items-center lg:items-start px-6 pb-16">
+      <h1 className="text-center lg:text-left text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] tracking-tight">
+        <span className="block text-white">Professional</span>
+        <span className="block text-neutral-700">Background</span>
+      </h1>
     </div>
   );
 }
