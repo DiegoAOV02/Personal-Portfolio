@@ -1,7 +1,8 @@
 import { GithubIcon, LinkedinIcon } from "../Icons/BrandIcons";
 import meImage from "../../assets/me-bgout.webp";
 
-const BIO = "Let's make your idea benefits you, your colleagues, and your customers.";
+const BIO =
+  "Let's make your idea benefits you, your colleagues, and your customers.";
 
 interface SocialLink {
   name: string;

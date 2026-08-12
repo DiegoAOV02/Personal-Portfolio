@@ -14,7 +14,9 @@ function Home() {
       </h1>
 
       <p className="body-text mt-6 max-w-md text-center lg:text-left">
-        Developer with experience to work with multi-disciplinary teams to bring the best benefits with help of coding and AI. Let's craft your idea into a product!
+        Developer with experience to work with multi-disciplinary teams to bring
+        the best benefits with help of coding and AI. Let's craft your idea into
+        a product!
       </p>
 
       <div className="mt-10 flex flex-wrap text-left lg:justify-start gap-10 sm:gap-16">
