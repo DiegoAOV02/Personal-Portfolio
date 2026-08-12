@@ -20,7 +20,7 @@ const socials: SocialLink[] = [
 
 const ProfileCard = () => {
   return (
-    <aside className="hidden lg:block lg:fixed lg:top-28 lg:left-[var(--sidebar-left)] lg:z-40 lg:w-[320px]">
+    <aside className="hidden lg:block lg:fixed lg:top-36 lg:left-[var(--sidebar-left)] lg:z-40 lg:w-[320px]">
       <div className="relative rounded-[28px] bg-white p-5 text-center shadow-2xl">
         <svg
           className="pointer-events-none absolute inset-0 h-full w-full text-cyan-500"

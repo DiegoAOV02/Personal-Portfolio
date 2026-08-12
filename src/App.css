@@ -1,7 +1,19 @@
+@reference "tailwindcss";
+
 #root {
   max-width: auto;
   margin: 0 auto;
   text-align: center;
+}
+
+@layer components {
+  /* Shared paragraph style: same line-height and color as the Home.tsx
+     intro text ("Let me help you to build..."). Reuse on any <p> that
+     should match it — keep layout classes (margin, max-width, alignment)
+     on the element itself since those vary per placement. */
+  .body-text {
+    @apply leading-relaxed text-stone-400;
+  }
 }
 
 @keyframes logo-spin {

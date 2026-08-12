@@ -42,7 +42,7 @@ function App() {
             <div className="flex flex-col min-h-screen">
               <Header />
               <ProfileCard />
-              <main className="flex-grow pt-24 scroll-smooth lg:pl-[calc(var(--sidebar-left)+384px)]">
+              <main className="flex-grow pt-24 lg:pt-36 scroll-smooth lg:pl-[calc(var(--sidebar-left)+384px)]">
                 <section id="home">
                   <Home />
                 </section>

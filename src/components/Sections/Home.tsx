@@ -13,7 +13,7 @@ function Home() {
         <span className="block text-neutral-700">Engineer</span>
       </h1>
 
-      <p className="mt-6 max-w-md text-center lg:text-left leading-relaxed text-gray-400">
+      <p className="body-text mt-6 max-w-md text-center lg:text-left">
         Let me help you to build your tool or application to achieve your goals.
       </p>
 
