@@ -26,7 +26,7 @@ const NavLinks = () => (
           <Icon size={16} strokeWidth={2} />
         </span>
         <span className="grid grid-cols-[0fr] transition-[grid-template-columns] duration-300 ease-out group-hover:grid-cols-[1fr]">
-          <span className="overflow-hidden whitespace-nowrap text-xs font-medium uppercase tracking-widest">
+          <span className="overflow-hidden whitespace-nowrap text-xs font-normal uppercase tracking-widest">
             <span className="inline-block pr-4">{name}</span>
           </span>
         </span>

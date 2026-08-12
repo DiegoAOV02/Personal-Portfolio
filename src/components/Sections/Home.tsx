@@ -8,7 +8,7 @@ const stats = [
 function Home() {
   return (
     <div className="w-full flex flex-col items-center lg:items-start px-6 pb-16">
-      <h1 className="text-center lg:text-left text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] tracking-tight">
+      <h1 className="text-center lg:text-left text-6xl md:text-7xl lg:text-8xl font-bold uppercase leading-[0.95] tracking-normal">
         <span className="block text-white">IT</span>
         <span className="block text-neutral-700">Engineer</span>
       </h1>
@@ -20,7 +20,7 @@ function Home() {
       <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-10 sm:gap-16">
         {stats.map(({ value, label }) => (
           <div key={label}>
-            <div className="text-4xl md:text-5xl font-black text-white">
+            <div className="text-4xl md:text-5xl font-semibold text-white">
               {value}
             </div>
             <div className="mt-2 max-w-32 text-xs uppercase tracking-widest text-gray-400">

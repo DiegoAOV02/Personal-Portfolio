@@ -1,5 +1,5 @@
 import { GithubIcon, LinkedinIcon } from "../Icons/BrandIcons";
-import meImage from "../../assets/me.webp";
+import meImage from "../../assets/me-bgout.webp";
 
 const BIO = "IT Engineer building thoughtful, reliable products.";
 
@@ -44,11 +44,11 @@ const ProfileCard = () => {
           />
         </svg>
 
-        <div className="relative z-10 overflow-hidden rounded-[20px] ring-1 ring-cyan-500/20">
+        <div className="relative z-10 overflow-hidden rounded-[20px] ring-1 ">
           <img
             src={meImage}
             alt="Diego Ortiz"
-            className="aspect-[3/4] w-full object-cover"
+            className="aspect-[3/4] w-full origin-top scale-[1.7] object-cover"
           />
         </div>
 
@@ -60,7 +60,7 @@ const ProfileCard = () => {
           <span className="h-2 w-2 rounded-full bg-white" />
         </span>
 
-        <p className="relative z-10 mt-3 text-sm leading-relaxed text-gray-500">
+        <p className="relative z-10 mt-3 text-sm font-medium leading-relaxed text-gray-500">
           {BIO}
         </p>
 
